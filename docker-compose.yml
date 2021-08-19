@@ -39,7 +39,7 @@ services:
         restart: unless-stopped
     radarr:
         container_name: radarr
-        depends_on: 
+        depends_on:
             - "transmission"
             - "jackett"
             - "bazarr"
@@ -59,7 +59,7 @@ services:
         restart: unless-stopped
     sonarr:
         container_name: sonarr
-        depends_on: 
+        depends_on:
             - "transmission"
             - "jackett"
             - "bazarr"
@@ -99,7 +99,7 @@ services:
             - '${JELLYFIN_CONFIG_DIR}:/config'
             - '${MOVIES_DIR}:/data/movies'
             - '${SERIES_DIR}:/data/tvshows'
-        environment: 
+        environment:
             - PUID=${USERID}
             - PGID=${GROUPID}
             - TZ=${TIMEZONE}
@@ -108,5 +108,5 @@ services:
         image: linuxserver/jellyfin
         restart: unless-stopped
 networks:
-  default:
-    name: mediacenter_containers
+    default:
+        name: mediacenter_containers

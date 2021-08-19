@@ -39,7 +39,7 @@ services:
         restart: unless-stopped
     radarr:
         container_name: radarr
-        depends_on: 
+        depends_on:
             - "transmission"
             - "jackett"
             - "bazarr"
@@ -59,7 +59,7 @@ services:
         restart: unless-stopped
     sonarr:
         container_name: sonarr
-        depends_on: 
+        depends_on:
             - "transmission"
             - "jackett"
             - "bazarr"
@@ -107,8 +107,5 @@ services:
         image: linuxserver/plex
         restart: unless-stopped
 networks:
-  default:
-    name: mediaserver_containers
-
-
-    
+    default:
+        name: mediaserver_containers
